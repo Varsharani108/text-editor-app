@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="style.css">
+</head>
+<body>
+    <header><h1>STP COMPUTER</h1></p></header>
+    <section>
+        <video width="720" height="473" src="g.p barauni.mp4"id="vdo"></video>
+    </section>
+    <footer>
+        <button id="ubtn">
+            upload
+            <input type="file"accept=".mp4" id ="vupload"onchange="upload()">
+        </button>
+        <button onclick="vplay()" id="play">play</button>
+        <button onclick="vpause()" id="pause">pause</button>
+    </footer>
+    <script>
+        function vplay(){
+            var a=document.getElementById("vdo");
+            a.play();
+        }
+        function vpause()
+        {
+            var a=document.getElementById("vdo");
+            a.pause();
+        }
+        function upload()
+        {
+            var a=document.getElementById("vupload").value.replace(/.*(\/|\\)/,'');
+            var b=document.getElementById("vdo");
+            b.src=a;
+
+        }
+    </script>
+    
+</body>
+</html>
